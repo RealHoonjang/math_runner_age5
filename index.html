@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Runner Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Math Runner</h1>
+        <input type="text" id="playerName" placeholder="닉네임을 입력하세요">
+        <button id="startButton" disabled>게임 시작</button>
+        <div class="credit">Made by 훈장님</div>
+    </div>
+
+    <div id="gameScreen">
+        <div id="gameStats">
+            <div class="stat-item">
+                <span>STAGE</span>
+                <span id="stage">1</span>
+            </div>
+            <div class="stat-item">
+                <span>CAUGHT</span>
+                <span id="caughtCount">0</span>
+                <span>👮</span>
+            </div>
+            <div class="stat-item">
+                <div class="hearts-container">
+                    <div class="heart">❤️</div>
+                    <div class="heart">❤️</div>
+                    <div class="heart">❤️</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span>TIME</span>
+                <div class="timer-bar">
+                    <div class="timer-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="gameContainer">
+            <div id="player">
+                <img src="images/run1.png" class="player-img" alt="player">
+            </div>
+            <div id="successMessage">I caught the thief!</div>
+        </div>
+
+        <div id="mathProblem">
+            <p id="problem"></p>
+            <div id="choices">
+                <button class="choice-btn" onclick="checkAnswer(this)"></button>
+                <button class="choice-btn" onclick="checkAnswer(this)"></button>
+                <button class="choice-btn" onclick="checkAnswer(this)"></button>
+                <button class="choice-btn" onclick="checkAnswer(this)"></button>
+            </div>
+            <p id="timeLeft"></p>
+        </div>
+        <div class="credit game-credit">Made by 훈장님</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
